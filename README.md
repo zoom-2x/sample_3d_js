@@ -1,4 +1,4 @@
-# Sample 3D JS
+# Sample 3D JS (software renderer)
 
 * scanline rasterizer
 * raycaster (wolfenstein3D style)
