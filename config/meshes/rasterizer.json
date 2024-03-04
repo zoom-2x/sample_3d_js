@@ -1,0 +1,16 @@
+{
+    "name": "rasterizer",
+    "comment": "Rasterizer textures.",
+    "output_dir": "assets/meshes",
+
+    "list": [
+        "package/meshes/cube.obj",
+        "package/meshes/torus_knot.obj",
+        "package/meshes/monkey.obj",
+        "package/meshes/african_head.obj",
+        "package/meshes/headscan.obj",
+        "package/meshes/alien.obj",
+        "package/meshes/cyberpunk_car.obj",
+        "package/meshes/diablo.obj"
+    ]
+}

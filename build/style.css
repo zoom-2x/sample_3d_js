@@ -1,0 +1,16 @@
+body {
+    padding: 20px;
+    font-family: Tahoma;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#menu-panel {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+

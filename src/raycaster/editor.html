@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ray casting / Editor</title>
+        <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../libs/bootstrap/bootstrap-icons/bootstrap-icons.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body id="root">
+
+        <div class="container-fluid" id="editor-panel">
+
+            <div id="console" style="
+                background: #000;
+                color: #ccc;
+                padding: 10px;
+                border-radius: 4px;
+                font-family: Tahoma;
+                font-size: 12px;
+                margin-bottom: 10px;">&nbsp;</div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="btn-group brush-selector-group mb-3" id="brush_selector">
+                        <input type="radio" class="btn-check draw_filter" name="brush_type" id="brush_cursor" autocomplete="off">
+                        <label class="btn brush-selector btn-outline-primary" for="brush_cursor">Cursor</label>
+
+                        <input type="radio" class="btn-check draw_filter" name="brush_type" id="brush_clear" autocomplete="off">
+                        <label class="btn brush-selector btn-outline-primary" for="brush_clear">Clear</label>
+
+                        <input type="radio" class="btn-check draw_filter" name="brush_type" id="brush_empty" autocomplete="off">
+                        <label class="btn brush-selector btn-outline-primary" for="brush_empty">Empty</label>
+
+                        <input type="radio" class="btn-check draw_filter" name="brush_type" id="brush_wall" autocomplete="off">
+                        <label class="btn brush-selector btn-outline-primary" for="brush_wall">Wall</label>
+
+                        <input type="radio" class="btn-check draw_filter" name="brush_type" id="brush_light" autocomplete="off">
+                        <label class="btn brush-selector btn-outline-primary" for="brush_light">Light</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3 g-3">
+                <div class="col-3">
+
+                    <div class="accordion" id="settings-bar">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#map-generation-panel" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Map generation
+                                </button>
+                            </h2>
+
+                            <div id="map-generation-panel" class="panel accordion-collapse collapse show">
+                                <div>
+                                    <label for="map_name" class="form-label">Name</label>
+                                    <input type="input" class="form-control" name="map_name" id="map_name" />
+                                </div>
+
+                                <div>
+                                    <label for="map_rows" class="form-label">Rows</label>
+                                    <input type="input" class="form-control" name="map_rows" id="map_rows" />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="map_cols" class="form-label">Cols</label>
+                                    <input type="input" class="form-control" name="map_cols" id="map_cols" />
+                                </div>
+
+                                <div class="d-grid mb-2">
+                                    <button type="button" class="btn btn-success" id="generate_map">Generate</button>
+                                </div>
+                                <div class="d-grid mb-2">
+                                    <button type="button" class="btn btn-success" id="save_map_button" data-bs-toggle="modal" data-bs-target="#save_map_modal">Save</button>
+                                </div>
+                                <div class="d-grid mb-2">
+                                    <button type="button" class="btn btn-success" id="load_map_button" data-bs-toggle="modal" data-bs-target="#load_map_modal">Load</button>
+                                </div>
+                                <div class="d-grid mb-2">
+                                    <button type="button" class="btn btn-success" id="delete_light_button" style="display: none;">Delete light</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#map-settings-panel" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Map settings
+                                </button>
+                            </h2>
+
+                            <div id="map-settings-panel" class="panel accordion-collapse collapse show">
+                                <div>
+                                    <label for="map_height" class="form-label">Height</label>
+                                    <input type="input" class="form-control" name="map_height" id="map_height" />
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div>
+                                            <label for="ambient_color_r" class="form-label">Ambient R:</label>
+                                            <input type="input" class="form-control" name="ambient_color_r" id="ambient_color_r" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <div>
+                                            <label for="ambient_color_g" class="form-label">Ambient G:</label>
+                                            <input type="input" class="form-control" name="ambient_color_g" id="ambient_color_g" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <div>
+                                            <label for="ambient_color_b" class="form-label">Ambient B:</label>
+                                            <input type="input" class="form-control" name="ambient_color_b" id="ambient_color_b" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-2">
+                                    <label for="map_ceiling_texture" class="form-label">Ceiling texture</label>
+                                    <select class="form-select" id="map_ceiling_texture"></select>
+                                </div>
+
+                                <div class="mb-2">
+                                    <label for="map_floor_texture" class="form-label">Floor texture</label>
+                                    <select class="form-select" id="map_floor_texture"></select>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <label for="map_u_offset" class="form-label">Wall u offset</label>
+                                        <input type="input" class="form-control" name="map_u_offset" id="map_u_offset" value="0" />
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="map_v_offset" class="form-label">Wall v offset</label>
+                                        <input type="input" class="form-control" name="map_v_offset" id="map_v_offset" value="0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#brush-properties-panel" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Brush settings
+                                </button>
+                            </h2>
+
+                            <div id="brush-properties-panel" class="panel accordion-collapse collapse show">
+
+                                <!-- Brush wall properties. -->
+
+                                <div id="brush_wall_properties" style="display:none;">
+                                    <div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="flag_mirror" value="1">
+                                            <label class="form-check-label" for="flag_mirror">Mirror</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="u_offset" class="form-label">U offset</label>
+                                            <input type="input" class="form-control" name="u_offset" id="u_offset" value="0" />
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="v_offset" class="form-label">V offset</label>
+                                            <input type="input" class="form-control" name="v_offset" id="v_offset" value="0" />
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="wall_texture" class="form-label">Texture</label>
+                                        <select class="form-select" id="wall_texture"></select>
+                                    </div>
+                                </div>
+
+                                <!-- Brush empty properties. -->
+
+                                <div id="brush_empty_properties" style="display:none;">
+
+                                    <div class="mb-3">
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="spawn_point" />
+                                                    <label class="form-check-label" for="spawn_point">
+                                                        Spawn point
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-12">
+                                                <label for="empty_ceiling_texture" class="form-label">Ceiling texture</label>
+                                                <select class="form-select" id="empty_ceiling_texture"></select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-12">
+                                                <label for="empty_floor_texture" class="form-label">Floor texture</label>
+                                                <select class="form-select" id="empty_floor_texture"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Brush light properties. -->
+
+                                <div id="brush_light_properties" style="display:none;">
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col-12"><span id="light_id"></span></div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div>
+                                                    <label for="light_color_r" class="form-label">R:</label>
+                                                    <input type="input" class="form-control" name="light_color_r" id="light_color_r" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-4">
+                                                <div>
+                                                    <label for="light_color_g" class="form-label">G:</label>
+                                                    <input type="input" class="form-control" name="light_color_g" id="light_color_g" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-4">
+                                                <div>
+                                                    <label for="light_color_b" class="form-label">B:</label>
+                                                    <input type="input" class="form-control" name="light_color_b" id="light_color_b" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label for="light_radius" class="form-label">Radius:</label>
+                                            <input type="input" class="form-control" name="light_radius" id="light_radius" />
+                                        </div>
+                                        <div>
+                                            <label for="light_intensity" class="form-label">Intensity:</label>
+                                            <input type="input" class="form-control" name="light_intensity" id="light_intensity" />
+                                        </div>
+                                        <div>
+                                            <label for="light_z" class="form-label">Z:</label>
+                                            <input type="input" class="form-control" name="light_z" id="light_z" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-9">
+                    <canvas id="3dbase"></canvas>
+                </div>
+            </div>
+
+            <div class="modal fade" id="save_map_modal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Copy map data</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="save_modal_content">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="load_map_modal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Paste map data</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="save_modal_content">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="../libs/jquery.js"></script>
+        <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="raycaster_editor.js"></script>
+    </body>
+</html>

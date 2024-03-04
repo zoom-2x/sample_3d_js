@@ -1,0 +1,41 @@
+{
+    "name": "voxel-study",
+    "description": "",
+    "version": "1.0.0",
+    "private": true,
+    "devDependencies": {
+        "@babel/core": "^7.20.7",
+        "@babel/preset-env": "^7.20.2",
+        "@popperjs/core": "^2.11.6",
+        "babel-preset-minify": "^0.5.2",
+        "babelify": "^10.0.0",
+        "bootstrap": "^5.2.3",
+        "bootstrap-icons": "^1.10.3",
+        "coffeescript": "^2.7.0",
+        "grunt": "^1.0.3",
+        "grunt-browserify": "^5.3.0",
+        "grunt-contrib-clean": "^1.1.0",
+        "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-uglify": "^3.4.0",
+        "grunt-exorcise": "^2.1.1",
+        "grunt-extract-sourcemap": "^0.1.19",
+        "grunt-terser": "^2.0.0",
+        "http-server": "^0.11.1",
+        "jquery": "^3.3.1",
+        "simplex-noise": "^4.0.1",
+        "sprintf-js": "^1.1.2",
+        "terser": "^5.16.1",
+        "watchify": "^3.11.1"
+    },
+    "scripts": {
+        "grunt": "grunt",
+        "build": "grunt build",
+        "build-main": "grunt build_main",
+        "build-wireframe": "grunt build_wireframe",
+        "build-rasterization": "grunt build_rasterization",
+        "build-voxels": "grunt build_voxels",
+        "build-quadtree": "grunt build_quadtree",
+        "build-raycaster": "grunt build_raycaster",
+        "build-raycaster-editor": "grunt build_raycaster_editor"
+    }
+}

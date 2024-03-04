@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3D Sandbox</title>
+        <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../libs/bootstrap/bootstrap-icons/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../common-style.css" />
+    </head>
+    <body>
+
+        <div class="container-lg" id="rasterization-panel">
+
+            <div class="row mb-3 g-3">
+                <div class="col-12">
+                    <div id="console">&nbsp;</div>
+                </div>
+            </div>
+
+            <div class="row mb-3 g-3">
+                <div class="col-3">
+                    <select class="form-select" id="scene_select">
+                        <option selected value="0">Triangle color</option>
+                        <option value="1">Plane color</option>
+                        <option value="2">Plane texture</option>
+                        <option value="3">Cube</option>
+                        <option value="4">Torus knot</option>
+                        <option value="5">Monkey</option>
+                        <option value="6">African head</option>
+                        <option value="7">Diablo</option>
+                        <option value="8">Headscan</option>
+                        <option value="9">Cyberpunk car</option>
+                        <option value="10">Alien</option>
+                        <option value="11">AoD</option>
+                    </select>
+                </div>
+
+                <div class="col-6">
+                    <div class="btn-group">
+                        <input type="checkbox" class="btn-check draw_filter" id="draw_points" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="draw_points">Points</label>
+
+                        <input type="checkbox" class="btn-check draw_filter" id="draw_lines" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="draw_lines">Lines</label>
+
+                        <input type="checkbox" class="btn-check draw_filter" id="draw_triangles" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="draw_triangles">Triangles</label>
+
+                        <input type="checkbox" class="btn-check draw_filter" id="texture_filtering" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="texture_filtering">Filtering</label>
+                    </div>
+                </div>
+
+                <div class="col-3 align-right">
+                    <button id="back-to-menu-button" class="btn">Back to menu</button>
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <canvas id="3dbase" style="
+                            image-rendering: optimizeSpeed;             /* Older versions of FF          */
+                            image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+                            image-rendering: -webkit-optimize-contrast; /* Safari                        */
+                            image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+                            image-rendering: pixelated;                 /* Awesome future-browsers       */
+                            -ms-interpolation-mode: nearest-neighbor;   /* IE"></canvas>
+            </div>
+
+            <div class="row" id="scaling">
+                <div class="col-12">
+                    <input type="range" class="form-range" min="1" max="100" value="1" title="scaling" />
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../libs/jquery.js"></script>
+        <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="rasterization.js"></script>
+    </body>
+</html>

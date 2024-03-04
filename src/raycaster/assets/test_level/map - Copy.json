@@ -1,0 +1,44 @@
+{
+    "name": "Test level",
+    "rows": 5,
+    "cols": 5,
+    "height": 2,
+    "half_height": 1,
+
+    "floor_texture": 3,
+    "ceiling_texture": 3,
+    "ceiling_floor_texture_scale": [2, 1],
+
+    "data": [
+        {"type": 2, "row": 0, "col": 0, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 0, "col": 1, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 1, "row": 0, "col": 2, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 0, "col": 3, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 0, "col": 4, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 1, "col": 0, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 1, "row": 1, "col": 1, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 0, "flags": 1},
+        {"type": 1, "row": 1, "col": 2, "textures": [-1, -1, -1, -1, 4, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 0, "flags": 1},
+        {"type": 3, "row": 1, "col": 3, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 1, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 1, "col": 4, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 2, "col": 0, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 1, "row": 2, "col": 1, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 0, "flags": 1},
+        {"type": 1, "row": 2, "col": 2, "textures": [-1, -1, -1, -1, 5, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 0, "flags": 1},
+        {"type": 4, "row": 2, "col": 3, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 1, "flags": 1},
+        {"type": 2, "row": 2, "col": 4, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 3, "col": 0, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 1, "row": 3, "col": 1, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 0, "flags": 1},
+        {"type": 1, "row": 3, "col": 2, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 0, "flags": 1},
+        {"type": 1, "row": 3, "col": 3, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 0, "flags": 1},
+        {"type": 2, "row": 3, "col": 4, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 4, "col": 0, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 4, "col": 1, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 1, "row": 4, "col": 2, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 4, "col": 3, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1},
+        {"type": 2, "row": 4, "col": 4, "textures": [-1, -1, -1, -1, -1, -1], "lightmaps": [-1, -1, -1, -1, -1, -1], "low_z": 0, "high_z": 2, "flags": 1}
+    ],
+
+    "lights": [
+        {"position": [0.5, 2.2, 0.5], "radius": 4, "color": [255, 0, 0]}
+    ],
+    "objects": []
+}

@@ -1,0 +1,16 @@
+{
+    "name": "rasterizer",
+    "comment": "Rasterizer textures.",
+    "output_dir": "assets/textures",
+
+    "list": [
+        "package/textures/rasterizer/checkerboard.bmp",
+        "package/textures/rasterizer/ronin.bmp",
+        "package/textures/rasterizer/african_head.bmp",
+        "package/textures/rasterizer/cyberpunk_car.bmp",
+        "package/textures/rasterizer/headscan.bmp",
+        "package/textures/rasterizer/alien.bmp",
+        "package/textures/rasterizer/diablo.bmp",
+        "package/textures/rasterizer/aod.bmp"
+    ]
+}

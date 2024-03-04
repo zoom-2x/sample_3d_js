@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ray casting</title>
+        <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../libs/bootstrap/bootstrap-icons/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../common-style.css" />
+    </head>
+
+    <body id="root">
+        <div class="container-lg" id="raycaster-panel">
+
+            <div class="row mb-3 g-3">
+                <div class="col-12">
+                    <div id="console">&nbsp;</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <button id="back-to-menu-button" class="btn raycaster">Back to menu</button>
+
+                    <div id="div3dbase" tabindex="1" style="outline: none;">
+                        <canvas id="3dbase" style="
+                            image-rendering: optimizeSpeed;             /* Older versions of FF          */
+                            image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+                            image-rendering: -webkit-optimize-contrast; /* Safari                        */
+                            image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+                            image-rendering: pixelated;                 /* Awesome future-browsers       */
+                            -ms-interpolation-mode: nearest-neighbor;   /* IE"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../libs/jquery.js"></script>
+        <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="raycaster.js"></script>
+    </body>
+</html>

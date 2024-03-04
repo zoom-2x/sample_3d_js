@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3D Sandbox</title>
+        <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="libs/bootstrap/bootstrap-icons/bootstrap-icons.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="common-style.css" />
+    </head>
+    <body>
+
+        <div class="container-lg" id="menu-panel">
+
+            <div class="row mb-3">
+                <h2>3D Sandbox</h2>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <select class="form-select" id="scene-select">
+                        <option selected value="0">Rasterization</option>
+                        <option value="1">Raycaster</option>
+                        <option value="2">Voxels</option>
+                        <option value="3">Wireframe</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <button id="run-button" type="button" class="btn">Run</button>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="libs/jquery.js"></script>
+        <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

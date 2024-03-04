@@ -1,0 +1,30 @@
+{
+    "name": "raycaster",
+    "comment": "Raycaster textures.",
+    "output_dir": "assets/textures",
+
+    "list": [
+        "package/textures/raycaster/wall_0.bmp",
+        "package/textures/raycaster/floor_0.bmp",
+        "package/textures/raycaster/ceiling_0.bmp",
+        "package/textures/raycaster/floor_light_red.bmp",
+        "package/textures/raycaster/floor_light_green.bmp",
+        "package/textures/raycaster/floor_1.bmp",
+        "package/textures/raycaster/floor_2.bmp",
+        "package/textures/raycaster/wall_1.bmp",
+        "package/textures/raycaster/wall_2.bmp",
+        "package/textures/raycaster/floor_3.bmp",
+        "package/textures/raycaster/floor_4.bmp",
+        "package/textures/raycaster/wall_3.bmp",
+        "package/textures/raycaster/wall_4.bmp",
+        "package/textures/raycaster/wall_5.bmp",
+        "package/textures/raycaster/wall_6.bmp",
+        "package/textures/raycaster/floor_5.bmp",
+        "package/textures/raycaster/wall_7.bmp",
+        "package/textures/raycaster/floor_6.bmp",
+        "package/textures/raycaster/floor_7.bmp",
+        "package/textures/raycaster/floor_8.bmp",
+        "package/textures/raycaster/floor_9.bmp",
+        "package/textures/raycaster/floor_10.bmp"
+    ]
+}

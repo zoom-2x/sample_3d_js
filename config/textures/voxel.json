@@ -1,0 +1,40 @@
+{
+    "name": "voxel",
+    "comment": "Voxel textures.",
+    "output_dir": "assets/textures",
+
+    "list":
+    [
+        "package/textures/voxels/grid_base.bmp",
+
+        "package/textures/voxels/column_side_0.bmp",
+        "package/textures/voxels/column_side_0rcw.bmp",
+        "package/textures/voxels/column_side_1.bmp",
+        "package/textures/voxels/column_side_1rccw.bmp",
+        "package/textures/voxels/column_side_1rcw.bmp",
+        "package/textures/voxels/column_top_0.bmp",
+
+        "package/textures/voxels/matrix_cube.bmp",
+        "package/textures/voxels/matrix_cube_top.bmp",
+        "package/textures/voxels/matrix_cube_bottom.bmp",
+
+        "package/textures/voxels/bricks_0.bmp",
+        "package/textures/voxels/bricks_1.bmp",
+        "package/textures/voxels/floor_tile_0.bmp",
+        "package/textures/voxels/floor_tile_1.bmp",
+        "package/textures/voxels/floor_tile_2.bmp",
+
+        "package/textures/voxels/bricks_1_bottom.bmp",
+        "package/textures/voxels/bricks_1_top.bmp",
+
+        "package/textures/voxels/deco_0.bmp",
+        "package/textures/voxels/light_0.bmp",
+        "package/textures/voxels/deco_1.bmp",
+        "package/textures/voxels/light_1.bmp",
+        "package/textures/voxels/deco_2.bmp",
+        "package/textures/voxels/metal_0.bmp",
+        "package/textures/voxels/metal_1.bmp",
+        "package/textures/voxels/chessboard_x2.bmp",
+        "package/textures/voxels/chessboard_x4.bmp"
+    ]
+}

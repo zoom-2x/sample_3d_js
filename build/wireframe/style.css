@@ -1,0 +1,52 @@
+body {
+    padding: 20px;
+    font-family: Tahoma;
+    margin: 0 auto;
+    width: 800px;
+}
+
+#console {
+    background: #000;
+    color: #ccc;
+    padding: 10px 16px;
+    border-radius: 3px;
+    font-family: Tahoma;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    margin-bottom: 10px;
+}
+
+#settings-panel {
+    width: 800px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+#scaling {}
+
+select.form-select {
+    font-size: .8rem;
+}
+
+select.form-select option {
+    padding: 4px 0;
+}
+
+.btn-group .btn {
+    background: #eee;
+    font-size: .8rem;
+    color: #888;
+    border-width: 0;
+    line-height: 1.3rem;
+}
+
+.btn-group .btn:hover {
+    background: #aaa !important;
+    color: #fff;
+}
+
+.btn-check:checked + .btn {
+    background: #000 !important;
+    color: #fff;
+}

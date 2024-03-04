@@ -1,0 +1,54 @@
+body {
+    padding: 20px;
+}
+
+.form-label {
+    font-size: .8rem;
+    margin-bottom: 0.3rem;
+}
+
+.brush-selector {
+    margin-bottom: 4px;
+    border-radius: 4px !important;
+}
+
+.brush-selector-group {
+    width: 100%;
+}
+
+.btn-group label {
+    margin-right: 4px;
+}
+
+.panel {
+    padding: 10px 16px;
+    /* border: 1px solid #eee; */
+    /* border-radius: 2px; */
+    /* margin-bottom: 20px; */
+}
+
+.panel .panel-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Tahoma;
+    margin-bottom: 10px;
+}
+
+#brush_selector label {
+    color: #555;
+    border: 1px solid #ccc;
+    font-size: .8rem;
+    text-transform: uppercase;
+    line-height: 1rem;
+}
+
+#brush_selector .btn-check:checked+.btn {
+    background: #999;
+    color: #eee;
+    border: 1px solid #777;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #555;
+    background: #eee;
+}

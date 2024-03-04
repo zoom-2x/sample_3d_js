@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3D Sandbox</title>
+        <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../libs/bootstrap/bootstrap-icons/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../common-style.css" />
+    </head>
+
+    <body>
+        <div class="container-lg" id="wireframe-panel">
+
+            <div class="row mb-2 g-3">
+                <div class="col-12">
+                    <div id="console">&nbsp;</div>
+                </div>
+            </div>
+
+            <div class="row mb-3 g-3">
+                <div class="col-3">
+                    <select class="form-select" id="model_select">
+                        <option selected value="0">Box</option>
+                        <option value="1">Torus knot</option>
+                        <option value="2">African head</option>
+                        <option value="3">Diablo</option>
+                    </select>
+                </div>
+
+                <div class="col-7">
+                    <div class="btn-group">
+                        <input type="checkbox" class="btn-check draw_filter" id="draw_points" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="draw_points">Draw points</label>
+
+                        <input type="checkbox" class="btn-check draw_filter" id="draw_lines" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="draw_lines">Draw lines</label>
+                    </div>
+                </div>
+
+                <div class="col-2 align-right">
+                    <button id="back-to-menu-button" class="btn">Back to menu</button>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <canvas id="3dbase"></canvas>
+                </div>
+            </div>
+
+            <div class="row" id="scaling">
+                <div class="col-12">
+                    <input type="range" class="form-range" min="1" max="100" value="1" title="scaling" />
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../libs/jquery.js"></script>
+        <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="wireframe.js"></script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "sources": [
+    "node_modules/browser-pack/_prelude.js",
+    "src/main.js"
+  ],
+  "names": [],
+  "mappings": "AAAA;;;ACAA,IAAI,MAAM,GAAG,CACT,0BAA0B,EAC1B,sBAAsB,EACtB,mBAAmB,EACnB,sBAAsB,CACzB;AAED,CAAC,CAAC,aAAa,CAAC,CAAC,EAAE,CAAC,OAAO,EAAE,aAAa,EAAE,UAAS,CAAC,EACtD;EACI,IAAI,WAAW,GAAG,CAAC,CAAC,eAAe,CAAC,CAAC,GAAG,EAAE;EAE1C,IAAI,WAAW,GAAG,CAAC,IAAI,WAAW,IAAI,MAAM,CAAC,MAAM,EAC/C,WAAW,GAAG,CAAC;EAEnB,MAAM,CAAC,QAAQ,CAAC,IAAI,GAAG,MAAM,CAAC,WAAW,CAAC;AAC9C,CAAC,CAAC",
+  "file": "generated.js",
+  "sourceRoot": "",
+  "sourcesContent": [
+    "(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=\"function\"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error(\"Cannot find module '\"+i+\"'\");throw a.code=\"MODULE_NOT_FOUND\",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u=\"function\"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()",
+    "var scenes = [\n    \"rasterization/index.html\",\n    \"raycaster/index.html\",\n    \"voxels/index.html\",\n    \"wireframe/index.html\"\n];\n\n$(\"#menu-panel\").on(\"click\", \"#run-button\", function(e)\n{\n    var scene_index = $(\"#scene-select\").val();\n\n    if (scene_index < 0 || scene_index >= scenes.length)\n        scene_index = 0;\n\n    window.location.href = scenes[scene_index];\n});\n"
+  ]
+}
