@@ -1,6 +1,6 @@
 # Software Renderer / JS
 
-![Software Renderer / JS](zoom-2x/software_renderer_js/images/readme.jpg)
+![Software Renderer / JS](images/readme.jpg)
 
 * scanline rasterizer
 * raycaster (wolfenstein3D style)
